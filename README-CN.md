@@ -1,5 +1,6 @@
 # vue3-golden-layout-virtualcomponent
 Gloden Layout官网：[http://golden-layout.com](http://golden-layout.com)
+
 Golden Layout Git：[https://github.com/golden-layout/golden-layout](https://github.com/golden-layout/golden-layout)
 
 本Demo演示了Golden Layout布局库的最灵活自由但也是最复杂的一个用法：Virtual Component，使用这种用法，你可以跟其它的任何框架结合，而不会受限于Golden Layout的写法，GL的另外三种用法或多或少会跟其它框架冲突，因为GL默认是直接修改DOM树，而其它框架，比如vue，是将自己的结构渲染成DOM树

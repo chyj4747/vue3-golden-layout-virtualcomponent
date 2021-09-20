@@ -5,6 +5,7 @@
 
 
 Gloden Layout official site: [http://golden-layout.com](http://golden-layout.com)
+
 Golden Layout Git: [https://github.com/golden-layout/golden-layout](https://github.com/golden-layout/golden-layout)
 
 This demo shows the most flexible but also the most complex way of using Golden Layout, which is the Virtual Component. By using virtual component, you can integrate golden layout with any other framework such as Vue.
