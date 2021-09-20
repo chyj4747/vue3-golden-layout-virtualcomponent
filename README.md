@@ -17,7 +17,7 @@ This demo is built by vue-cli4, and use Golden Layout v2.3.0
 
 If you don't know golden layout, but want to use its nice features, then the first thing I will recommend is the README in the GL git.
 
-Note: current time is 2021/09/20. GL official site still doesn't have tutorial and documentation for v2, although git repo is already updated to v2.3. The virtual component is added since GL v2.x, which changes a lot of the base codes. But it doesn't mean the documentation in the official site is useless. At least you can learn the config params. If you want to learn GL, currently you can just read the README and the codes in the folder apitest of GL git repo.
+Note: current date is 2021/09/20. GL official site still doesn't have tutorial and documentation for v2, although git repo is already updated to v2.3. The virtual component is added since GL v2.x, which changes a lot of the base codes. But it doesn't mean the documentation in the official site is useless. At least you can learn the config params. If you want to learn GL, currently you can just read the README and the codes in the folder apitest of GL git repo.
 
 ## How to run the demo
 1. git pull or download this demo repo
