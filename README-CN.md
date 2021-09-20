@@ -28,7 +28,9 @@ Golden Layout Git：[https://github.com/golden-layout/golden-layout](https://git
 当然，除此之外你还需要从npm下载golden-layout
 
 **Glayout.vue**
+
 这是GL布局组件，掌管整个布局
+
 它有三个接口函数：
 
 	addGLComponent(componentType: string, title: string)
@@ -38,7 +40,9 @@ Golden Layout Git：[https://github.com/golden-layout/golden-layout](https://git
 具体用法详见下方
 
 **GlComponent.vue**
+
 这是GL布局中的单个内容容器，用于存放并展示你的自定义内容
+
 比如像Visual Studio那样打开了很多代码的标签页，一个容器就是存放了某一个标签页里所展示的内容，包含代码、行数字、滚动条等，标签只是跟这个容器绑定，但不归这个容器管
 
 **注：你可能需要更改这两个组件以满足你自己的需求，毕竟这两个组件只是最基本地使用GL**
@@ -88,8 +92,11 @@ glayout就是你唯一需要关心的组件，将该组件放到任何你想要�
 ##### 将自定义内容添加到GL布局中
 调用组件的`addGLComponent(componentType: string, title: string)`方法
 - componentType：一般是组件名，比如 "Content1"
+
 最终加载的内容组件为：glcPath + componentType + ".vue"
+
 在本例中就是 "./Content1.vue"
+
 由于是组合路径，当然你也可以写 "SomePath/Content1"，最后会加载 "./SomePath/Content1.vue"
 
 ##### 保存当前布局
@@ -104,6 +111,7 @@ ResolvedLayoutConfig是保存的布局配置类型，你获取到保存的字符
 
 ##### LayoutConfig
 这是GL定义的一个结构，官网的文档有
+
 本Demo里有个最简单的版本：`src/ts/predefined-layouts.ts`，是从官方的apitest里抄过来的，所以详细的可以去看官方的案例
 
 配置里的componentType要写你的自定义内容组件的文件名，即 "Content1"这种，如果不在glcPath下，还得加上额外路径
@@ -114,7 +122,9 @@ ResolvedLayoutConfig是保存的布局配置类型，你获取到保存的字符
 	<style src="golden-layout/dist/css/themes/goldenlayout-dark-theme.css"></style>
 
 官方样式在node_modules内，你还能找到更多主题
+
 第1行是基础样式
+
 第2行是主题样式，主题样式可换，不过我这种写法应该是换不了的，得用import之类动态导入
 
 之所以样式没有集成到Glayout组件里，是为了方便你控制样式，而且GL的虚拟组件本身就是为了跟其它框架结合使用的，如果你用了其它UI框架或库，一般来说都会跟GL官方样式不和谐，这时你就会需要自定义GL的样式
