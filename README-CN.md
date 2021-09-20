@@ -112,7 +112,7 @@ ResolvedLayoutConfig是保存的布局配置类型，你获取到保存的字符
 	<style src="golden-layout/dist/css/goldenlayout-base.css"></style>
 	<style src="golden-layout/dist/css/themes/goldenlayout-dark-theme.css"></style>
 
-官方样式在node_modules内
+官方样式在node_modules内，你还能找到更多主题
 第1行是基础样式
 第2行是主题样式，主题样式可换，不过我这种写法应该是换不了的，得用import之类动态导入
 
