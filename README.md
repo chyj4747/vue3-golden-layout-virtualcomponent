@@ -33,6 +33,7 @@ In the path `src/components/`, `Glayout.vue` and `GlComponent.vue` are the compo
 Of course, you need to download golden-layout from npm.
 
 **Glayout.vue**
+
 This is the layout component, which controls and manages the whole layout.
 
 It exports 3 methods:
@@ -44,6 +45,7 @@ It exports 3 methods:
 See below for more details.
 
 **GlComponent.vue**
+
 This is the container for custom content. It is also the conponent defined in GL document.
 
 **Note: you may need to modify these components for your own demand. These two components just made for the basic usage of GL.**
@@ -93,8 +95,11 @@ You can write any vue component. It should work with this demo.
 ##### Add custom content to GL
 Call `addGLComponent(componentType: string, title: string)`
 - componentType: usually it is the component's file name, such as "Content1"
+
 The component to be loaded is `glcPath + componentType + ".vue"`
+
 In this case it's "./Content1.vue"
+
 Because it combines the paths, you can write "SomePath/Content1", then "./SomePath/Content1.vue" will be loaded.
 
 ##### Save current layout
@@ -111,6 +116,7 @@ ResolvedLayoutConfig is the saved config type. After you get the saved config st
 It is defined by GL, you can find it on the official site.
 
 There is a simple version of the config in this demo, which is `src/ts/predefined-layouts.ts`.
+
 It is copied from GL official repo's apitest, so you can see the official repo for more details.
 
 "componentType" in the config is the same as the first param of the method `addGLComponent`.
@@ -133,6 +139,9 @@ The virtual component of GL is designed for using with other frameworks or libs.
 2. The style related to GL can not use `scoped`. Because GL is dynamically added to the dom tree, which cannot be resovled by vue. But for app like IDE, usually one style is enough.
 3. For single page app, scroll bar is not needed. `overflow:hidden` should be added to `body`, or otherwise the scroll bar will appear when dragging the tab to the border of body. You can delete the body's overflow of this demo to see the effect.
 4. The componentState in LayoutConfig may not useful to you, also Glayout does not export it, but it has a trap so I have to mention it here.
+
 Basically it can be set to any value type. But I just recommend to set it to undefined and object.
+
 It is used for an impotant ref, without this ref, Glayout cannot find any target GlComponent.
+
 What I did is if componentState is not object, it will be set to { refId }, or if it is object, then refId will be it's new key.
