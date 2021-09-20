@@ -138,10 +138,4 @@ The virtual component of GL is designed for using with other frameworks or libs.
 1. If you want to modify or write a new component like Glayout, then make sure the root DOM of GL is above of your GlComponent. Otherwise the GL container will be rendered on top of all content components, so you can't see any content. See the order in the template of Glayout.vue.
 2. The style related to GL can not use `scoped`. Because GL is dynamically added to the dom tree, which cannot be resovled by vue. But for app like IDE, usually one style is enough.
 3. For single page app, scroll bar is not needed. `overflow:hidden` should be added to `body`, or otherwise the scroll bar will appear when dragging the tab to the border of body. You can delete the body's overflow of this demo to see the effect.
-4. The componentState in LayoutConfig may not useful to you, also Glayout does not export it, but it has a trap so I have to mention it here.
-
-Basically it can be set to any value type. But I just recommend to set it to undefined and object.
-
-It is used for an impotant ref, without this ref, Glayout cannot find any target GlComponent.
-
-What I did is if componentState is not object, it will be set to { refId }, or if it is object, then refId will be it's new key.
+4. The componentState in LayoutConfig may not useful to you, also Glayout does not export it, but it has a trap so I have to mention it here. Basically it can be set to any value type. But I just recommend to set it to undefined and object. It is used for an impotant ref, without this ref, Glayout cannot find any target GlComponent. What I did is if componentState is not object, it will be set to { refId }, or if it is object, then refId will be it's new key.
