@@ -25,7 +25,7 @@ Note: current date is 2021/09/20. GL official site still doesn't have tutorial a
 3. run `yarn serve`, make sure you installed vue-cli4. I never used vue-cli3, so don't know whether it supports vue3
 4. open `http://localhost:8080/` in your broswer
 
-## This demo has already made GL as vue3 components, they can be used in other projects directly!
+## This demo has already integrate GL as vue3 components, they can be used in other projects directly!
 > But, these conponents are wrote in TS, if you don't use ts, then you have to translate by yourself.
 
 In the path `src/components/`, `Glayout.vue` and `GlComponent.vue` are the components. They must be used together. Other files in this repo are for demo.
