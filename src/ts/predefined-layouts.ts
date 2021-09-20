@@ -23,7 +23,7 @@ const miniRowConfig: LayoutConfig = {
                 title: "I'm wide",
                 header: { show: "top", popout: false },
                 componentType: "Content2",
-                componentState: { haha: 123 },
+                componentState: { abc: 123 },
             } as ComponentItemConfig,
         ],
     },
