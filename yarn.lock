@@ -4256,6 +4256,11 @@ globby@^9.2.0:
     pify "^4.0.1"
     slash "^2.0.0"
 
+golden-layout@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.nlark.com/golden-layout/download/golden-layout-2.3.0.tgz#8c79fd9c5176cb7b614c8cc90a7d785b655d1b52"
+  integrity sha1-jHn9nFF2y3thTIzJCn14W2VdG1I=
+
 graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.2.8"
   resolved "https://registry.nlark.com/graceful-fs/download/graceful-fs-4.2.8.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fgraceful-fs%2Fdownload%2Fgraceful-fs-4.2.8.tgz#e412b8d33f5e006593cbd3cee6df9f2cebbe802a"

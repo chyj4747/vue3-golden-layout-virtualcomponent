@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "golden-layout": "^2.3.0",
     "vue": "^3.0.0"
   },
   "devDependencies": {
