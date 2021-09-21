@@ -13,7 +13,7 @@ This demo shows the most flexible but also the most complex way of using Golden 
 This demo does not show Popup!
 So if you find a bug when using popup, don't ask me. Try to send an issue to the GL git for help.
 
-This demo is built by vue-cli4, and use Golden Layout v2.3.0
+This demo is created by vue-cli4, and use Golden Layout v2.3.0
 
 If you don't know golden layout, but want to use its nice features, then the first thing I will recommend is the README in the GL git.
 
