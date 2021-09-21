@@ -17,7 +17,7 @@ Golden Layout Git：[https://github.com/golden-layout/golden-layout](https://git
 ## Demo如何运行
 1. 下载该仓库，git拉取或zip下载都行
 2. 在项目根目录运行命令行：`yarn`
-3. 命令行运行：`yarn serve`，确保你安装的是vue-cli4，我没用过vue-cli3，不知道是否支持vue3
+3. 命令行运行：`yarn serve`
 4. 浏览器打开：`http://localhost:8080/`
 
 ## Demo已将GL封装成vue3组件，可在其它项目中直接使用！
