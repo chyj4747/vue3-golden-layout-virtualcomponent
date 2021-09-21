@@ -22,7 +22,7 @@ Note: current date is 2021/09/20. GL official site still doesn't have tutorial a
 ## How to run the demo
 1. git pull or download this demo repo
 2. run `yarn` in the root path of the repo
-3. run `yarn serve`, make sure you installed vue-cli4. I never used vue-cli3, so don't know whether it supports vue3
+3. run `yarn serve`
 4. open `http://localhost:8080/` in your broswer
 
 ## This demo has already integrated GL as vue3 components, they can be used in other projects directly!
