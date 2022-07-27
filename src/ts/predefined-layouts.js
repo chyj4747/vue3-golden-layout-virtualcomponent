@@ -5,7 +5,7 @@ import {
     StackItemConfig,
 } from "golden-layout";
 
-const miniRowConfig: LayoutConfig = {
+const miniRowConfig = {
     root: {
         type: ItemType.row,
         content: [
@@ -17,14 +17,14 @@ const miniRowConfig: LayoutConfig = {
                 componentType: "Content1",
                 width: 10,
                 componentState: undefined,
-            } as ComponentItemConfig,
+            },
             {
                 type: "component",
                 title: "I'm wide",
                 header: { show: "top", popout: false },
                 componentType: "Content2",
                 componentState: { abc: 123 },
-            } as ComponentItemConfig,
+            },
         ],
     },
 };

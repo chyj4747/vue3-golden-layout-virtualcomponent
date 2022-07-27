@@ -26,47 +26,65 @@
     </div>
 </template>
 
-<script setup lang="ts">
-import Glayout from "@/components/Glayout.vue";
+
+<script>
 import { ref } from "vue";
 import { prefinedLayouts } from "./ts/predefined-layouts";
+import Glayout from "@/components/Glayout.vue";
 
-const GLayoutRoot = ref<null | HTMLElement>(null);
+export default {
+    name : 'App',
 
-const onClickInitLayoutMinRow = () => {
-    if (!GLayoutRoot.value) return;
-    GLayoutRoot.value.loadGLLayout(prefinedLayouts.miniRow);
-};
+    setup() {
+        const GLayoutRoot = ref(undefined);
 
-const onClickAddGLComponent1 = () => {
-    if (!GLayoutRoot.value) return;
-    GLayoutRoot.value.addGLComponent("Content1", "Title 1st");
-};
+        const onClickInitLayoutMinRow = () => {
+            if (!GLayoutRoot.value) return;
+            GLayoutRoot.value.loadGLLayout(prefinedLayouts.miniRow);
+        };
 
-const onClickAddGLComponent2 = () => {
-    if (!GLayoutRoot.value) return;
-    GLayoutRoot.value.addGLComponent("Content2", "I'm wide");
-};
+        const onClickAddGLComponent1 = () => {
+            if (!GLayoutRoot.value) return;
+            GLayoutRoot.value.addGLComponent("Content1", "Title 1st");
+        };
 
-const onClickAddGLComponent3 = () => {
-    if (!GLayoutRoot.value) return;
-    GLayoutRoot.value.addGLComponent("Content3", "I'm high");
-};
+        const onClickAddGLComponent2 = () => {
+            if (!GLayoutRoot.value) return;
+            GLayoutRoot.value.addGLComponent("Content2", "I'm wide");
+        };
 
-const onClickSaveLayout = () => {
-    if (!GLayoutRoot.value) return;
-    const config = GLayoutRoot.value.getLayoutConfig();
-    localStorage.setItem("gl_config", JSON.stringify(config));
-};
+        const onClickAddGLComponent3 = () => {
+            if (!GLayoutRoot.value) return;
+            GLayoutRoot.value.addGLComponent("Content3", "I'm high");
+        };
 
-const onClickLoadLayout = () => {
-    const str = localStorage.getItem("gl_config");
-    if (!str) return;
-    if (!GLayoutRoot.value) return;
-    const config = JSON.parse(str as string);
-    GLayoutRoot.value.loadGLLayout(config);
-};
+        const onClickSaveLayout = () => {
+            if (!GLayoutRoot.value) return;
+            const config = GLayoutRoot.value.getLayoutConfig();
+            localStorage.setItem("gl_config", JSON.stringify(config));
+        };
+
+        const onClickLoadLayout = () => {
+            const str = localStorage.getItem("gl_config");
+            if (!str) return;
+            if (!GLayoutRoot.value) return;
+            const config = JSON.parse(str);
+            GLayoutRoot.value.loadGLLayout(config);
+        };
+
+        return {
+            GLayoutRoot,
+            onClickInitLayoutMinRow,
+            onClickAddGLComponent1,
+            onClickAddGLComponent2,
+            onClickAddGLComponent3,
+            onClickSaveLayout,
+            onClickLoadLayout
+        }
+    }
+}
 </script>
+
 
 <style>
 html {

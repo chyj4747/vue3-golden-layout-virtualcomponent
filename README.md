@@ -20,6 +20,7 @@ If you don't know golden layout, but want to use its nice features, then the fir
 Note: current date is 2021/09/20. GL official site still doesn't have tutorial and documentation for v2, although git repo is already updated to v2.3. The virtual component is added since GL v2.x, which changes a lot of the base codes. But it doesn't mean the documentation in the official site is useless. At least you can learn the config params. If you want to learn GL, currently you can just read the README and the codes in the folder apitest of GL git repo.
 
 ## How to run the demo
+0. run `npm install -g babel-eslint`
 1. git pull or download this demo repo
 2. run `yarn` in the root path of the repo
 3. run `yarn serve`
