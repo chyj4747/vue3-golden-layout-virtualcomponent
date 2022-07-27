@@ -48,7 +48,7 @@ export default {
     },
 
     setup(props) {
-        const GLRoot = ref(undefined);
+        const GLRoot = ref(null);
         let GLayout;
         const GlcKeyPrefix = readonly(ref("glc_"));
 

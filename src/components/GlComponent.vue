@@ -10,7 +10,7 @@ import { ref, defineExpose } from "vue";
 export default {
     name: "GlComponent",
     setup(props) {
-        const GLComponent = ref(undefined);
+        const GLComponent = ref(null);
 
         const numberToPixels = (value) => {
             return value.toString(10) + "px";

@@ -16,7 +16,7 @@ const miniRowConfig = {
                 isClosable: false,
                 componentType: "Content1",
                 width: 10,
-                componentState: undefined,
+                componentState: null,
             },
             {
                 type: "component",

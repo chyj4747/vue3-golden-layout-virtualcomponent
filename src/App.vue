@@ -36,7 +36,7 @@ export default {
     name : 'App',
 
     setup() {
-        const GLayoutRoot = ref(undefined);
+        const GLayoutRoot = ref(null);
 
         const onClickInitLayoutMinRow = () => {
             if (!GLayoutRoot.value) return;
