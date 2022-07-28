@@ -42,13 +42,17 @@ import {
 import GlComponent from "@/components/GlComponent.vue";
 
 export default {
-    name : "Glayout",
+    name : "GlLayout",
     props : {
         glcPath: String,
     },
 
+    components: {
+        GlComponent,
+    },
+
     setup(props) {
-        const GLRoot = ref(null);
+        const GLRoot = ref(undefined);
         let GLayout;
         const GlcKeyPrefix = readonly(ref("glc_"));
 
@@ -110,6 +114,7 @@ export default {
                             itemConfig.componentType,
                             itemConfig.title
                         );
+                        console.log(typeof itemConfig.componentState);
                         if (typeof itemConfig.componentState == "object")
                             itemConfig.componentState["refId"] = index;
                         else itemConfig.componentState = { refId: index };
@@ -132,7 +137,7 @@ export default {
          * Mount
          *******************/
         onMounted(() => {
-            if (GLRoot.value == null)
+            if (GLRoot.value == undefined)
                 throw new Error("Golden Layout can't find the root DOM!");
 
             const onResize = () => {
@@ -234,10 +239,18 @@ export default {
             GLayout.beforeVirtualRectingEvent = handleBeforeVirtualRectingEvent;
         });
 
-        /*******************
-         * Expose
-         *******************/
         return {
+            GLRoot,
+            GLayout,
+            GlcKeyPrefix,
+            MapComponents,
+            AllComponents,
+            UnusedIndexes,
+            CurIndex,
+            GlBoundingClientRect,
+            instance,
+
+            addComponent,
             addGLComponent,
             loadGLLayout,
             getLayoutConfig

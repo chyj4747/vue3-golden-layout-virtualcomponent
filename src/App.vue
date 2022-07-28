@@ -18,11 +18,11 @@
             <div style="width: 20px; display: inline-block"></div>
             <button @click="onClickLoadLayout">Load Layout</button>
         </div>
-        <glayout
+        <gl-layout
             ref="GLayoutRoot"
             glc-path="./"
             style="width: 100%; height: calc(100% - 90px)"
-        ></glayout>
+        ></gl-layout>
     </div>
 </template>
 
@@ -30,13 +30,16 @@
 <script>
 import { ref } from "vue";
 import { prefinedLayouts } from "./ts/predefined-layouts";
-import Glayout from "@/components/Glayout.vue";
+import GlLayout from "@/components/GlLayout.vue";
 
 export default {
     name : 'App',
 
+    components: {
+        GlLayout,
+    },
     setup() {
-        const GLayoutRoot = ref(null);
+        const GLayoutRoot = ref(undefined);
 
         const onClickInitLayoutMinRow = () => {
             if (!GLayoutRoot.value) return;
@@ -45,17 +48,17 @@ export default {
 
         const onClickAddGLComponent1 = () => {
             if (!GLayoutRoot.value) return;
-            GLayoutRoot.value.addGLComponent("Content1", "Title 1st");
+            GLayoutRoot.value.addGLComponent("ContentFirst", "Title 1st");
         };
 
         const onClickAddGLComponent2 = () => {
             if (!GLayoutRoot.value) return;
-            GLayoutRoot.value.addGLComponent("Content2", "I'm wide");
+            GLayoutRoot.value.addGLComponent("ContentSecond", "I'm wide");
         };
 
         const onClickAddGLComponent3 = () => {
             if (!GLayoutRoot.value) return;
-            GLayoutRoot.value.addGLComponent("Content3", "I'm high");
+            GLayoutRoot.value.addGLComponent("ContentThrid", "I'm high");
         };
 
         const onClickSaveLayout = () => {
