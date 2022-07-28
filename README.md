@@ -19,11 +19,11 @@ Note: current date is 2021/09/20. GL official site still doesn't have tutorial a
 
 # 변경사항
 
-- vue naming 규칙에 맞춰 일부 파일명을 수정했습니다.
-Content1.vue -> ContentFirst.vue
-Content2.vue -> ContentSecond.vue
-Content3.vue -> ContentThrid.vue
-Glayout.vue -> GlLayout.vue
+- vue naming 규칙에 맞춰 일부 파일명을 수정했습니다. 
+Content1.vue -> ContentFirst.vue 
+Content2.vue -> ContentSecond.vue 
+Content3.vue -> ContentThrid.vue 
+Glayout.vue -> GlLayout.vue 
 
 - typescript 기반으로 작성된 vue파일을 javascript 기반 코드로 수정했습니다.
 
