@@ -250,7 +250,6 @@ export default {
             GlBoundingClientRect,
             instance,
 
-            addComponent,
             addGLComponent,
             loadGLLayout,
             getLayoutConfig
