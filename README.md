@@ -1,6 +1,4 @@
 # vue3-golden-layout-virtualcomponent
-
-[中文文档](https://github.com/chyj4747/vue3-golden-layout-virtualcomponent/blob/master/README-CN.md)
 ------------
 
 
@@ -19,12 +17,24 @@ If you don't know golden layout, but want to use its nice features, then the fir
 
 Note: current date is 2021/09/20. GL official site still doesn't have tutorial and documentation for v2, although git repo is already updated to v2.3. The virtual component is added since GL v2.x, which changes a lot of the base codes. But it doesn't mean the documentation in the official site is useless. At least you can learn the config params. If you want to learn GL, currently you can just read the README and the codes in the folder apitest of GL git repo.
 
+# 변경사항
+
+- vue naming 규칙에 맞춰 일부 파일명을 수정했습니다.
+Content1.vue -> ContentFirst.vue
+Content2.vue -> ContentSecond.vue
+Content3.vue -> ContentThrid.vue
+Glayout.vue -> GlLayout.vue
+
+- typescript 기반으로 작성된 vue파일을 javascript 기반 코드로 수정했습니다.
+
 ## How to run the demo
-0. run `npm install -g babel-eslint`
+
 1. git pull or download this demo repo
-2. run `yarn` in the root path of the repo
-3. run `yarn serve`
-4. open `http://localhost:8080/` in your broswer
+2. run `npm install --global yarn`
+3. run `yarn add eslint @babel/core @babel/eslint-parser --save-dev`
+4. run `yarn install` in the root path of the repo
+5. run `yarn serve`
+6. open `http://localhost:8080/` in your broswer
 
 ## This demo has already integrated GL as vue3 components, they can be used in other projects directly!
 > But, these conponents are wrote in TS, if you don't use ts, then you have to translate by yourself.
