@@ -20,10 +20,10 @@ Note: current date is 2021/09/20. GL official site still doesn't have tutorial a
 # 변경사항
 
 - vue naming 규칙에 맞춰 일부 파일명을 수정했습니다. 
-Content1.vue -> ContentFirst.vue 
-Content2.vue -> ContentSecond.vue 
-Content3.vue -> ContentThrid.vue 
-Glayout.vue -> GlLayout.vue 
+`Content1.vue -> ContentFirst.vue `
+`Content2.vue -> ContentSecond.vue `
+`Content3.vue -> ContentThrid.vue `
+`Glayout.vue -> GlLayout.vue `
 
 - typescript 기반으로 작성된 vue파일을 javascript 기반 코드로 수정했습니다.
 
@@ -49,8 +49,8 @@ This is the layout component, which controls and manages the whole layout.
 
 It exports 3 methods:
 
-	addGLComponent(componentType: string, title: string)
-	loadGLLayout(layoutConfig: LayoutConfig | ResolvedLayoutConfig)
+	addGLComponent(componentType, title)
+	loadGLLayout(layoutConfig)
 	getLayoutConfig()
 
 See below for more details.
@@ -72,14 +72,20 @@ Check `src/App.vue` for the complete code. Here just shows the simplest code.
 		></glayout>
 	</template>
 
-	<script setup lang="ts">
+	<script>
 		import Glayout from "@/components/Glayout.vue";
 		import { ref } from "vue";
 
-		const GLayoutRoot = ref<null | HTMLElement>(null);
-		onMounted(() => {
-			GLayoutRoot.value.addGLComponent("Content1", "Title 1st");
-		});
+		setup(){
+			const GLayoutRoot = ref(undefined);
+			onMounted(() => {
+				GLayoutRoot.value.addGLComponent("Content1", "Title 1st");
+			});
+
+			return {
+				GLayoutRoot
+			}
+		}
 	</script>
 
 	<style src="golden-layout/dist/css/goldenlayout-base.css"></style>
@@ -93,7 +99,7 @@ glayout is the only component you will use in code. Put it anywhere you wanna sh
 - style: must give value to width and height, which decide how many spaces GL will occupy. If they are undefined, then width may be 100%, but the height will be 0, which will cause the GL to be hidden. When making a single page app, that is you want GL to be full screen, not only to set height 100% in this style, but also you need to set the height of html, body and any parent doms to be 100%.
 
 ##### Custom content
-E.g. Content1.vue
+E.g. ContentFirst.vue
 
     <template>
         <div style="color: white">111</div>
@@ -104,12 +110,12 @@ It's simple. Here the white color is for the dark theme, otherwise the words can
 You can write any vue component. It should work with this demo.
 
 ##### Add custom content to GL
-Call `addGLComponent(componentType: string, title: string)`
+Call `addGLComponent(componentType, title)`
 - componentType: usually it is the component's file name, such as "Content1"
 
 The component to be loaded is `glcPath + componentType + ".vue"`
 
-In this case it's "./Content1.vue"
+In this case it's "./ContentFirst.vue"
 
 Because it combines the paths, you can write "SomePath/Content1", then "./SomePath/Content1.vue" will be loaded.
 
@@ -117,7 +123,7 @@ Because it combines the paths, you can write "SomePath/Content1", then "./SomePa
 Call `getLayoutConfig()` to get the config object, then use `JSON.stringify` to change it to string. You can then save the config string locally or in localStorage
 
 ##### Load layout
-Call `loadGLLayout(layoutConfig: LayoutConfig | ResolvedLayoutConfig)` to load your initial or saved layout config
+Call `loadGLLayout(layoutConfig)` to load your initial or saved layout config
 
 LayoutConfig is finally used in this method to load components.
 
