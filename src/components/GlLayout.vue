@@ -192,7 +192,7 @@ export default {
                 }
 
                 const ref = GlcKeyPrefix.value + refId;
-                const component = instance?.refs[ref];
+                const component = instance?.refs[ref][0];
 
                 MapComponents.set(container, { refId: refId, glc: component });
 
