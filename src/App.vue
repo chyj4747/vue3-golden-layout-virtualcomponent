@@ -58,7 +58,7 @@ export default {
 
         const onClickAddGLComponent3 = () => {
             if (!GLayoutRoot.value) return;
-            GLayoutRoot.value.addGLComponent("ContentThrid", "I'm high");
+            GLayoutRoot.value.addGLComponent("ContentThird", "I'm high");
         };
 
         const onClickSaveLayout = () => {
